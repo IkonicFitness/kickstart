@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
 <title>3 Days to Feel Like Yourself Again | Coach DVH</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
@@ -70,7 +71,17 @@ body{background:#F5F2EE;display:flex;justify-content:center;}
 </style>
 </head>
 <body>
-<div class="k">
+<div id="gate" style="display:flex;justify-content:center;align-items:center;min-height:100vh;background:#2A3432;padding:1.5rem;">
+  <div style="text-align:center;max-width:320px;">
+    <p style="font-size:10px;letter-spacing:.14em;color:#8FA8C8;text-transform:uppercase;margin-bottom:.5rem;">Coach DVH x Ikonic Fitness</p>
+    <h2 style="font-size:22px;font-weight:600;color:#F5F2EE;margin-bottom:.5rem;">This content is exclusive</h2>
+    <p style="font-size:12.5px;color:#A0AEAC;line-height:1.6;margin-bottom:1.25rem;">Enter the access code you received to unlock your 3-Day Kickstart.</p>
+    <input id="gate-pw" type="password" placeholder="Access code" style="width:100%;padding:.6rem .8rem;border:1px solid #3A5A8A;border-radius:6px;background:#1E2E2C;color:#F5F2EE;font-size:13px;margin-bottom:.75rem;text-align:center;">
+    <button onclick="checkGate()" style="width:100%;background:#8FA8C8;color:#1A2422;font-size:13.5px;font-weight:600;padding:.7rem;border-radius:7px;border:none;cursor:pointer;">Unlock</button>
+    <p id="gate-err" style="font-size:11px;color:#C87070;margin-top:.5rem;display:none;">Wrong code. Try again.</p>
+  </div>
+</div>
+<div class="k" id="content" style="display:none;">
   <div class="hero">
     <img class="hero-logo" src="https://raw.githubusercontent.com/IkonicFitness/kickstart/master/logo.png" alt="Ikonic Fitness" onerror="this.style.display='none'"/>
     <p class="hero-eye">Coach DVH x Ikonic Fitness</p>
@@ -224,6 +235,16 @@ body{background:#F5F2EE;display:flex;justify-content:center;}
 </div>
 
 <script>
+function checkGate(){
+  var pw=document.getElementById('gate-pw').value.toLowerCase().trim();
+  if(pw==='ikonic'){
+    document.getElementById('gate').style.display='none';
+    document.getElementById('content').style.display='block';
+  } else {
+    document.getElementById('gate-err').style.display='block';
+  }
+}
+document.getElementById('gate-pw').addEventListener('keydown',function(e){if(e.key==='Enter')checkGate();});
 function sd(i){
   document.querySelectorAll('.day').forEach((d,j)=>d.classList.toggle('on',j===i));
   document.querySelectorAll('.nb').forEach((b,j)=>b.classList.toggle('on',j===i));
