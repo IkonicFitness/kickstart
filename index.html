@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 Days to Feel Like Yourself Again | Coach DVH</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;}
+body{background:#F5F2EE;display:flex;justify-content:center;}
+.k{background:#F5F2EE;color:#2A3432;max-width:420px;width:100%;min-height:100vh;}
+.hero{background:#2A3432;padding:2rem 1.5rem 1.75rem;text-align:center;}
+.hero-logo{width:72px;height:72px;margin:0 auto 1rem;display:block;border-radius:50%;background:#1E2E2C;padding:4px;}
+.hero-eye{font-size:10px;letter-spacing:.14em;color:#8FA8C8;text-transform:uppercase;margin-bottom:.5rem;}
+.hero-title{font-size:26px;font-weight:600;color:#F5F2EE;line-height:1.2;margin-bottom:.35rem;}
+.hero-title span{color:#8FA8C8;}
+.hero-sub{font-size:12px;color:#A0AEAC;line-height:1.6;margin-bottom:1.1rem;}
+.hero-quote{background:rgba(143,168,200,.12);border-left:3px solid #C4A882;padding:.7rem 1rem;text-align:left;border-radius:0 6px 6px 0;}
+.hero-quote p{font-size:12px;color:#D2DCF0;font-style:italic;line-height:1.65;}
+.hero-quote span{font-size:10px;color:#C4A882;display:block;margin-top:.35rem;}
+.nav{display:flex;background:#2A3432;border-bottom:2px solid #3A5A8A;}
+.nb{flex:1;padding:.7rem .25rem;font-size:11.5px;font-weight:600;color:#A0AEAC;background:none;border:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;}
+.nb.on{color:#F5F2EE;border-bottom-color:#8FA8C8;background:#1E2E2C;}
+.day{display:none;padding:1.4rem 1.3rem 1rem;}
+.day.on{display:block;}
+.badge{display:inline-block;background:#3A5A8A;color:#D2DCF0;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-bottom:.65rem;}
+.dtitle{font-size:21px;font-weight:600;color:#1A2422;margin-bottom:.2rem;}
+.dtitle span{color:#3A5A8A;}
+.intro{font-size:12.5px;color:#3A4A48;line-height:1.65;margin-bottom:1.1rem;border-bottom:1px solid #C8C4BC;padding-bottom:1.1rem;}
+.slabel{font-size:9.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:#3A5A8A;margin-bottom:.5rem;margin-top:1.1rem;display:block;}
+.mcard{background:#2A3432;border-radius:8px;padding:.9rem 1rem;margin-bottom:1.1rem;}
+.mcard p{font-size:12.5px;color:#D2DCF0;font-style:italic;line-height:1.65;}
+.wmeta{font-size:11.5px;color:#2A3432;background:#EDEAE4;border:1px solid #C8C4BC;padding:.55rem .8rem;border-radius:6px;margin-bottom:.85rem;line-height:1.7;}
+.wmeta strong{color:#3A5A8A;}
+.wmeta em{color:#7A5A20;font-style:normal;font-weight:500;}
+.ex{background:#fff;border:1px solid #C8C4BC;border-radius:7px;padding:.65rem .9rem;margin-bottom:.45rem;}
+.exn{font-size:12.5px;font-weight:600;color:#1A2422;margin-bottom:.15rem;}
+.exc{font-size:11.5px;color:#4A5655;line-height:1.5;}
+.ncard{background:#EDEAE4;border:1px solid #C8C4BC;border-radius:8px;padding:.9rem 1rem;margin-bottom:.45rem;}
+.ncard p{font-size:12.5px;color:#2A3432;line-height:1.65;}
+.cnote{border-left:3px solid #C4A882;padding:.5rem .8rem;margin-top:.65rem;}
+.cnote p{font-size:11.5px;color:#7A5A20;font-style:italic;line-height:1.6;}
+.plate{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:.65rem 0;}
+.pi{background:#fff;border:1px solid #C8C4BC;border-radius:6px;padding:.55rem .7rem;}
+.pi .pl{font-size:9.5px;color:#4A5655;text-transform:uppercase;letter-spacing:.07em;font-weight:500;}
+.pi .pv{font-size:12px;font-weight:600;color:#1A2422;margin-top:2px;}
+.prot-calc{background:#fff;border:1px solid #C8C4BC;border-radius:8px;padding:1rem;margin-top:.65rem;}
+.prot-row{display:flex;align-items:center;gap:10px;margin-bottom:.75rem;}
+.prot-row label{font-size:11.5px;color:#2A3432;min-width:55px;font-weight:500;}
+.prot-row input{flex:1;padding:.4rem .6rem;border:1px solid #C8C4BC;border-radius:5px;font-size:12.5px;color:#1A2422;background:#F5F2EE;}
+.prot-row select{flex:1;padding:.4rem .6rem;border:1px solid #C8C4BC;border-radius:5px;font-size:12px;color:#1A2422;background:#F5F2EE;}
+.prot-btn{width:100%;background:#3A5A8A;color:#F5F2EE;border:none;border-radius:6px;padding:.55rem;font-size:12.5px;font-weight:600;cursor:pointer;margin-bottom:.75rem;}
+.prot-result{display:none;background:#2A3432;border-radius:6px;padding:.75rem;text-align:center;margin-bottom:.75rem;}
+.prot-result.show{display:block;}
+.pr-num{font-size:28px;font-weight:600;color:#8FA8C8;}
+.pr-label{font-size:11px;color:#A0AEAC;margin-top:2px;}
+.pr-range{font-size:11.5px;color:#C4A882;margin-top:.4rem;}
+.prot-tips{margin-top:.65rem;}
+.prot-tip{font-size:11.5px;color:#2A3432;padding:.3rem 0;border-bottom:1px solid #C8C4BC;line-height:1.55;}
+.prot-tip:last-child{border-bottom:none;}
+.prot-tip strong{color:#1A2422;}
+.cta-wrap{background:#2A3432;padding:1.75rem 1.4rem;text-align:center;}
+.cta-title{font-size:19px;font-weight:600;color:#F5F2EE;margin-bottom:.4rem;line-height:1.3;}
+.cta-sub{font-size:12.5px;color:#A0AEAC;line-height:1.6;margin-bottom:1.25rem;}
+.cta-btn{display:block;width:100%;background:#8FA8C8;color:#1A2422;font-size:13.5px;font-weight:600;padding:.8rem;border-radius:7px;border:none;cursor:pointer;margin-bottom:.65rem;text-decoration:none;line-height:1;}
+.cta-small{font-size:10.5px;color:#7A8A88;}
+.foot{background:#EDEAE4;padding:.9rem 1.4rem;text-align:center;border-top:1px solid #C8C4BC;}
+.foot p{font-size:10.5px;color:#4A5655;line-height:1.65;}
+.foot strong{color:#3A5A8A;}
+</style>
+</head>
+<body>
+<div class="k">
+  <div class="hero">
+    <img class="hero-logo" src="https://raw.githubusercontent.com/IkonicFitness/kickstart/main/logo.png" alt="Ikonic Fitness" onerror="this.style.display='none'"/>
+    <p class="hero-eye">Coach DVH x Ikonic Fitness</p>
+    <h1 class="hero-title">3 Days to Feel Like<br><span>Yourself Again</span></h1>
+    <p class="hero-sub">Body. Mind. Nutrition. Uncomplicated.<br>45 minutes. Home or gym. No excuses.</p>
+    <div class="hero-quote">
+      <p>"The science is easy. Doing it, that's the hard part. That's what I'm here for."</p>
+      <span>Coach DVH</span>
+    </div>
+  </div>
+
+  <div class="nav">
+    <button class="nb on" onclick="sd(0)">Day 1</button>
+    <button class="nb" onclick="sd(1)">Day 2</button>
+    <button class="nb" onclick="sd(2)">Day 3</button>
+    <button class="nb" onclick="sd(3)">Next Steps</button>
+  </div>
+
+  <div class="day on" id="d0">
+    <div class="badge">Day 1</div>
+    <h2 class="dtitle">Show <span>Up</span></h2>
+    <p class="intro">The hardest part is starting. Not the workout, the decision to show up. You made it. That already puts you ahead of most people. Now let's move.</p>
+    <span class="slabel">Mindset</span>
+    <div class="mcard"><p>Today is not about being perfect. It's about proving to yourself that you can. One session. One decision. That's it.</p></div>
+    <span class="slabel">Workout: Full Body Circuit</span>
+    <div class="wmeta">Warm up 5 min: march in place, arm circles, hip rotations<br><strong>3 rounds · 40 sec work · 20 sec rest · 90 sec between rounds</strong><br>Cool down 5 min: child's pose, hip flexor stretch, deep breathing</div>
+    <div class="ex"><div class="exn">1. Bodyweight Squats</div><div class="exc">Feet shoulder width, chest up, sit back into it</div></div>
+    <div class="ex"><div class="exn">2. Push-Ups (or knee push-ups)</div><div class="exc">Full range, chest to floor, lock out at the top</div></div>
+    <div class="ex"><div class="exn">3. Reverse Lunges (alternating)</div><div class="exc">Step back, back knee almost touches the floor</div></div>
+    <div class="ex"><div class="exn">4. Dumbbell Rows (or resistance band)</div><div class="exc">Squeeze at the top, control on the way down</div></div>
+    <div class="ex"><div class="exn">5. Glute Bridges</div><div class="exc">Drive through your heels, squeeze hard at the top</div></div>
+    <div class="ex"><div class="exn">6. Plank Hold</div><div class="exc">Straight line from head to heels. Breathe.</div></div>
+    <span class="slabel">Nutrition Focus: Protein First</span>
+    <div class="ncard">
+      <p>Today's only rule: eat protein at every meal. Eggs, chicken, Greek yogurt, cottage cheese, protein shake. Whatever works. Aim for 20 to 30 grams per meal.</p>
+      <div class="cnote"><p>Don't overthink food today. Prioritize protein and drink your water. That's it.</p></div>
+    </div>
+    <span class="slabel">Find Your Protein Goal</span>
+    <div class="prot-calc">
+      <div class="prot-row">
+        <label>Weight</label>
+        <input type="number" id="pw" placeholder="e.g. 145" min="80" max="400">
+        <select id="pu"><option value="lbs">lbs</option><option value="kg">kg</option></select>
+      </div>
+      <div class="prot-row">
+        <label>Goal</label>
+        <select id="pg">
+          <option value="lose">Lose weight</option>
+          <option value="recomp">Body recomp</option>
+          <option value="build">Build muscle</option>
+          <option value="maintain">Maintain</option>
+        </select>
+      </div>
+      <button class="prot-btn" onclick="calcProt()">Calculate my protein target</button>
+      <div class="prot-result" id="pr">
+        <div class="pr-num" id="pr-num"></div>
+        <div class="pr-label">grams of protein per day</div>
+        <div class="pr-range" id="pr-range"></div>
+      </div>
+      <div class="prot-tips" id="pt" style="display:none">
+        <div class="prot-tip"><strong>Spread it out.</strong> Aim for 20 to 40g per meal rather than hitting it all at once.</div>
+        <div class="prot-tip"><strong>Easy sources:</strong> chicken breast, eggs, Greek yogurt, cottage cheese, lean beef, protein shakes, tofu.</div>
+        <div class="prot-tip"><strong>Consistency beats perfection.</strong> Getting close every day beats hitting it perfectly twice a week.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day" id="d1">
+    <div class="badge">Day 2</div>
+    <h2 class="dtitle">Fuel <span>Right</span></h2>
+    <p class="intro">You showed up yesterday. Now we build. Today we talk about what you put in your body, because training hard and eating wrong will keep you stuck forever.</p>
+    <span class="slabel">Mindset</span>
+    <div class="mcard"><p>Food is fuel, not the enemy. Stop punishing yourself for what you ate last week. Today is a fresh start. We're building habits, not chasing perfection.</p></div>
+    <span class="slabel">Workout: Lower Body + Core Circuit</span>
+    <div class="wmeta">Warm up 5 min: leg swings, hip circles, bodyweight good mornings<br><strong>3 rounds · 40 sec work · 20 sec rest · 90 sec between rounds</strong><br>Cool down 5 min: seated hamstring stretch, pigeon pose, quad stretch</div>
+    <div class="ex"><div class="exn">1. Sumo Squats</div><div class="exc">Wide stance, toes out. Feel it in your inner thighs.</div></div>
+    <div class="ex"><div class="exn">2. Romanian Deadlifts</div><div class="exc">Hinge at the hips, slight knee bend. Feel the hamstrings stretch.</div></div>
+    <div class="ex"><div class="exn">3. Step-Ups (chair or bench)</div><div class="exc">Drive through the heel of the elevated foot</div></div>
+    <div class="ex"><div class="exn">4. Dead Bug</div><div class="exc">Lower back stays pressed to the floor the entire time</div></div>
+    <div class="ex"><div class="exn">5. Side Lunges (alternating)</div><div class="exc">Sit into the working leg, chest up</div></div>
+    <div class="ex"><div class="exn">6. Mountain Climbers</div><div class="exc">Control the pace. This is core work, not just cardio.</div></div>
+    <span class="slabel">Nutrition Focus: Build a Real Plate</span>
+    <div class="plate">
+      <div class="pi"><div class="pl">Half plate</div><div class="pv">Veggies or fruit</div></div>
+      <div class="pi"><div class="pl">Quarter plate</div><div class="pv">Lean protein</div></div>
+      <div class="pi"><div class="pl">Quarter plate</div><div class="pv">Complex carbs</div></div>
+      <div class="pi"><div class="pl">Examples</div><div class="pv">Rice, oats, sweet potato</div></div>
+    </div>
+    <div class="ncard">
+      <div class="cnote"><p>You don't need to count calories today. Just build the plate right. This one habit alone will change your body over time.</p></div>
+    </div>
+  </div>
+
+  <div class="day" id="d2">
+    <div class="badge">Day 3</div>
+    <h2 class="dtitle"><span>Commit</span></h2>
+    <p class="intro">Two days in. You're already ahead of the version of you that downloaded this and never started. Day 3 is about making a real decision. Are you doing this for real this time?</p>
+    <span class="slabel">Mindset</span>
+    <div class="mcard"><p>Results don't come from 3 days. They come from what you decide to do after day 3. The people who transform are the ones who keep going when it stops feeling new. That's the work.</p></div>
+    <span class="slabel">Workout: Full Body Strength Circuit</span>
+    <div class="wmeta">Warm up 5 min: jumping jacks, torso twists, inchworms<br><strong>4 rounds · 35 sec work · 25 sec rest · 60 sec between rounds</strong><br><em>You're a little stronger now. Push it.</em><br>Cool down 5 min: full body stretch, deep breathing</div>
+    <div class="ex"><div class="exn">1. Goblet Squat</div><div class="exc">Hold dumbbell at chest. Elbows inside your knees at the bottom.</div></div>
+    <div class="ex"><div class="exn">2. Push-Up to Shoulder Tap</div><div class="exc">After each rep, tap opposite shoulder. Don't let your hips rock.</div></div>
+    <div class="ex"><div class="exn">3. Single Leg Glute Bridge (alternating)</div><div class="exc">One leg extended, drive through the grounded heel</div></div>
+    <div class="ex"><div class="exn">4. Dumbbell Curl to Press</div><div class="exc">Curl up, press overhead. Control both directions.</div></div>
+    <div class="ex"><div class="exn">5. Lateral Band Walks (or bodyweight side steps)</div><div class="exc">Stay low, stay wide. Feel the glutes the whole time.</div></div>
+    <div class="ex"><div class="exn">6. Hollow Body Hold</div><div class="exc">Press lower back into the floor, arms overhead. Breathe.</div></div>
+    <span class="slabel">Nutrition Focus: Hydration + Recovery</span>
+    <div class="ncard">
+      <p>Today focus on water. Goal: half your bodyweight in ounces. 160 lbs = 80 oz of water. Add protein within 30 to 45 minutes after your workout to support recovery.</p>
+      <div class="cnote"><p>Most people are chronically dehydrated. Water alone will improve your energy, digestion, and performance more than any supplement.</p></div>
+    </div>
+  </div>
+
+  <div class="day" id="d3">
+    <div class="badge">You did the work</div>
+    <h2 class="dtitle">What's <span>Next</span></h2>
+    <p class="intro">Three days. Three workouts. Three steps closer to the version of yourself you've been putting off. This was just the beginning.</p>
+    <span class="slabel">Full 1 on 1 Coaching Includes</span>
+    <div style="margin-bottom:1.1rem;background:#2A3432;border-radius:8px;padding:1rem;">
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:.6rem;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#C4A882;flex-shrink:0;margin-top:6px;"></div>
+        <span style="font-size:13px;color:#F0EDE6;line-height:1.5;display:block;">Custom training program that scales every 4 weeks</span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:.6rem;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#C4A882;flex-shrink:0;margin-top:6px;"></div>
+        <span style="font-size:13px;color:#F0EDE6;line-height:1.5;display:block;">Custom macro and meal plan built for your body</span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:.6rem;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#C4A882;flex-shrink:0;margin-top:6px;"></div>
+        <span style="font-size:13px;color:#F0EDE6;line-height:1.5;display:block;">Daily accountability through the coaching app</span>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:10px;">
+        <div style="width:6px;height:6px;border-radius:50%;background:#C4A882;flex-shrink:0;margin-top:6px;"></div>
+        <span style="font-size:13px;color:#F0EDE6;line-height:1.5;display:block;">Someone in your corner who actually gives a damn</span>
+      </div>
+    </div>
+    <div class="mcard"><p>You get out what you put in. If you're ready to stop guessing and actually build a program around YOUR body, your schedule, and your goals, I'm here.</p></div>
+  </div>
+
+  <div class="cta-wrap">
+    <h2 class="cta-title">Ready to go further?</h2>
+    <p class="cta-sub">DM me on Instagram and let's build your full program. For real this time.</p>
+    <a class="cta-btn" href="https://www.instagram.com/coach.dvh" target="_blank">DM "READY" on Instagram</a>
+    <p class="cta-small">@Coach.DVH</p>
+  </div>
+
+  <div class="foot">
+    <p><strong>Coach DVH</strong> x Ikonic Fitness<br>Show up. Every day. Live Ikonic.</p>
+  </div>
+</div>
+
+<script>
+function sd(i){
+  document.querySelectorAll('.day').forEach((d,j)=>d.classList.toggle('on',j===i));
+  document.querySelectorAll('.nb').forEach((b,j)=>b.classList.toggle('on',j===i));
+}
+function calcProt(){
+  var w=parseFloat(document.getElementById('pw').value);
+  var u=document.getElementById('pu').value;
+  var g=document.getElementById('pg').value;
+  if(!w||w<50){alert('Please enter your weight first.');return;}
+  var lbs=u==='kg'?w*2.205:w;
+  var mult={lose:0.8,recomp:1.0,build:1.1,maintain:0.75};
+  var base=Math.round(lbs*mult[g]);
+  var lo=Math.round(lbs*(mult[g]-0.1));
+  var hi=Math.round(lbs*(mult[g]+0.1));
+  document.getElementById('pr-num').textContent=base+'g';
+  document.getElementById('pr-range').textContent='Range: '+lo+'g to '+hi+'g per day';
+  document.getElementById('pr').classList.add('show');
+  document.getElementById('pt').style.display='block';
+}
+</script>
+</body>
+</html>
